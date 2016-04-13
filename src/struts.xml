@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
     <contants name="conststruts.devMode" value="true"></contants>
     <package name="joseph" extends="struts-default">
@@ -9,7 +12,5 @@
 		<action name="*">
 		    <result>/WEB-INF/content/{1}.jsp</result>
 		</action>        
-        
     </package>
-    
 </struts>
