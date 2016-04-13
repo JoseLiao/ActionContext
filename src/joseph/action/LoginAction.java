@@ -19,6 +19,7 @@ public class LoginAction implements Action{
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 	@Override
 	public String execute() throws Exception {
 		ActionContext ctx = ActionContext.getContext();
@@ -27,6 +28,7 @@ public class LoginAction implements Action{
 			counter = 1;
 		else 
 			counter++;
+		//将登录的用户保存session
 		ctx.getApplication().put("counter", counter);
 		ctx.getSession().put("user", getUsername());
 		if (getUsername().equals("joseph")
